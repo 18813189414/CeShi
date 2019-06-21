@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>你好,同桌</h1>
+</body>
+
+</html>
+<script>
+    function Person(name,age,six){
+            this.name=name;
+            this.age=age;
+            this.six=six;
+            this.say=function(){
+                console.log("ok")
+            }
+    }
+    // let pp=new Person('xxx');
+    function Son(name,age,six){
+        Person.call(this,name,age,six)
+    }
+    var w=new Son('xxx',20,'男')
+    w.say()
+    console.log(w);
+</script>
